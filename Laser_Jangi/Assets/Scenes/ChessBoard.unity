@@ -4423,6 +4423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 841693428}
   - component: {fileID: 841693427}
+  - component: {fileID: 841693429}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -4565,8 +4566,8 @@ Transform:
   - {fileID: 1196026669}
   - {fileID: 1350375008}
   - {fileID: 1819680591}
-  - {fileID: 1204088988}
   - {fileID: 1057467736}
+  - {fileID: 1204088988}
   - {fileID: 713619454}
   - {fileID: 57706060}
   - {fileID: 325207943}
@@ -4592,6 +4593,18 @@ Transform:
   m_Father: {fileID: 640884224}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &841693429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841693426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4e5dcad58398d44a96a2b010dc90fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &851735538
 GameObject:
   m_ObjectHideFlags: 0
@@ -5185,7 +5198,7 @@ GameObject:
   - component: {fileID: 1057467738}
   - component: {fileID: 1057467737}
   m_Layer: 0
-  m_Name: White_Nemo2
+  m_Name: White_Nemo1
   m_TagString: Nemo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5203,7 +5216,7 @@ Transform:
   m_LocalScale: {x: 0.118750006, y: 0.118750006, z: 0.11445785}
   m_Children: []
   m_Father: {fileID: 841693428}
-  m_RootOrder: 77
+  m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!65 &1057467737
 BoxCollider:
@@ -5859,7 +5872,7 @@ GameObject:
   - component: {fileID: 1204088990}
   - component: {fileID: 1204088989}
   m_Layer: 0
-  m_Name: White_Nemo1
+  m_Name: White_Nemo2
   m_TagString: Nemo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5877,7 +5890,7 @@ Transform:
   m_LocalScale: {x: 0.118750006, y: 0.118750006, z: 0.11445785}
   m_Children: []
   m_Father: {fileID: 841693428}
-  m_RootOrder: 76
+  m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!65 &1204088989
 BoxCollider:
