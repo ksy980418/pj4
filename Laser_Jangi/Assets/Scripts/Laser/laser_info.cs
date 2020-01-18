@@ -11,6 +11,8 @@ public class laser_info : MonoBehaviour {
 
     public bool laser_on;
 
+    public GameObject Explosion = null;
+
     private Vector3 cur_direction;
     private Vector3 start_point;
     private Vector3 end_point;
@@ -65,6 +67,10 @@ public class laser_info : MonoBehaviour {
                     }
                     else {
                         end_point = hit.point;
+
+                        Destroy(hit.transform.gameObject, 0.2f);
+                        ExplosionSound.instance.PlaySound();
+                        Instantiate(Explosion, hit.transform.position, Quaternion.identity);
                         break;
                     }
                 }
@@ -85,6 +91,10 @@ public class laser_info : MonoBehaviour {
                     }
                     else {
                         end_point = hit.point;
+
+                        Destroy(hit.transform.gameObject, 0.2f);
+                        ExplosionSound.instance.PlaySound();
+                        Instantiate(Explosion, hit.transform.position, Quaternion.identity);
                         break;
                     }
                 }
@@ -121,6 +131,10 @@ public class laser_info : MonoBehaviour {
                 }
                 else if (hit.transform.gameObject.tag == "King") {
                     end_point = hit.point;
+                    
+                    Destroy(hit.transform.gameObject, 0.2f);
+                    ExplosionSound.instance.PlaySound();
+                    Instantiate(Explosion, hit.transform.position, Quaternion.identity);
                     //Debug.Log(hit.transform.gameObject.tag);
                     break;
                 }
