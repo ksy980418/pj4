@@ -46,3 +46,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: board
+    uniqueID: 363512387
+    locked: 0
+  - name: object
+    uniqueID: 1764137895
+    locked: 0
+  - name: laser
+    uniqueID: 4235942165
+    locked: 0
