@@ -17,6 +17,8 @@ public class Splitter_Info : MonoBehaviour {
     private float half_size_x;
     private float half_size_y;
 
+    public bool is_laser_on;
+
     private ArrayList splitters;
 
     void Start() {
@@ -34,6 +36,7 @@ public class Splitter_Info : MonoBehaviour {
         temp = null;
 
         splitters = new ArrayList();
+        is_laser_on = false;
     }
 
     public Vector3 reflect_point(Vector3 hit_pos, Vector3 cur_dir) {
@@ -101,7 +104,8 @@ public class Splitter_Info : MonoBehaviour {
 
     public Vector3 reflect_direction(Vector3 hit_pos, bool make_laser) {
         if (make_laser) {
-            laserOn();
+            is_laser_on = true;
+            LaserOn();
         }
         switch (angle)
         {
@@ -149,7 +153,16 @@ public class Splitter_Info : MonoBehaviour {
         }
     }
 
-    private void laserOn() {
+    void Update() {
+        if (is_laser_on) {
+            line.enabled = true;
+        }
+        else {
+            line.enabled = false;
+        }
+    }
+
+    private void LaserOn() {
         line.enabled = true;
         splitters.Clear();
         splitters.Add(transform.position);
@@ -263,5 +276,6 @@ public class Splitter_Info : MonoBehaviour {
         }
         line.positionCount = ++num;
         line.SetPosition(num-1, end_point);
+        //is_laser_on = false;
     }
 }

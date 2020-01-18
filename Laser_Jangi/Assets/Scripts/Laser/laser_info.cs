@@ -81,7 +81,7 @@ public class laser_info : MonoBehaviour {
 
                         end_point = start_point + cur_direction*2000;
 
-                        Debug.Log(hit.transform.gameObject.tag);
+                        //Debug.Log(hit.transform.gameObject.tag);
                     }
                     else {
                         end_point = hit.point;
